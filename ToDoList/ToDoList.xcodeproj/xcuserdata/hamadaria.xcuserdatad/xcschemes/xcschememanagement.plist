@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ToDoList.xcscheme_^#shared#^_</key>
+		<key>Copy of ToDoList 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Copy of ToDoList.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>ToDoList.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>03E2D0D7221FC6540074810A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03E2D0EB221FC6560074810A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>03E2D0F6221FC6560074810A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
