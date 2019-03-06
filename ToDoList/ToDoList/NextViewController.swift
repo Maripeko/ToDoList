@@ -7,11 +7,15 @@
 
 import UIKit
 
+var addName = [String]()
+
 class NextViewController: UIViewController, UIPickerViewDataSource,  UIPickerViewDelegate {
     
     
     
- 
+    //タイトル入力
+    @IBOutlet weak var TitleText: UITextField!
+    
     //カテゴリー入力
     @IBOutlet weak var CategoryText: UITextField!
     //日付入力
@@ -22,14 +26,28 @@ class NextViewController: UIViewController, UIPickerViewDataSource,  UIPickerVie
     var datePicker: UIDatePicker = UIDatePicker()
     var PickerView: UIPickerView = UIPickerView()
     
+    //決定ボタン
+    @IBAction func addButton(_ sender: Any) {
+        
+        addName.append(TitleText.text!);
+        
+        TitleText.text = ""
+        
+        UserDefaults.standard.set(addName, forKey: "TodoList")
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //右揃え
+        CategoryText.textAlignment = NSTextAlignment.right
+        DateText.textAlignment = NSTextAlignment.right
+        
+        //中央
+        TitleText.textAlignment = NSTextAlignment.center
         
         
         
         //カテゴリーピッカー設定
-        //categoryPicker.delegate = self as? UIPickerViewDelegate
-        //categoryPicker.dataSource = self as? UIPickerViewDataSource
         PickerView.showsSelectionIndicator = true
  
         
