@@ -8,6 +8,7 @@
 import UIKit
 
 var addName = [String]()
+var addDate = [String]()
 
 class NextViewController: UIViewController, UIPickerViewDataSource,  UIPickerViewDelegate {
     
@@ -30,10 +31,12 @@ class NextViewController: UIViewController, UIPickerViewDataSource,  UIPickerVie
     @IBAction func addButton(_ sender: Any) {
         
         addName.append(TitleText.text!);
-        
+        addDate.append(DateText.text!);
         TitleText.text = ""
         
         UserDefaults.standard.set(addName, forKey: "TodoList")
+        
+        UserDefaults.standard.set(addDate, forKey: "TodoList")
         
     }
     override func viewDidLoad() {
@@ -113,7 +116,7 @@ class NextViewController: UIViewController, UIPickerViewDataSource,  UIPickerVie
     @objc func Ddone(){
         //日付のフォーマット
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy年MM月dd日"
+        formatter.dateFormat = "MM月dd日"
         DateText.text = "\(formatter.string(from: datePicker.date))"
         DateText.endEditing(true)
     }
