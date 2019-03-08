@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return TodoCell
     }
 
-    
+    let sortedStrArray = addDate.sort { $1 > $0 }
 
     override func viewDidLoad() {
         super.viewDidLoad()
