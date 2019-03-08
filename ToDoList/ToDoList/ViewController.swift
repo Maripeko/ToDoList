@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var Cell: UITableViewCell!
     @IBOutlet weak var TableView: UITableView!
     
+    @IBOutlet weak var Date: UILabel!
     //セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addName.count
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let TodoCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TodoCell", for: indexPath)
         //変数の中身を作る
         TodoCell.textLabel!.text = addName[indexPath.row]
+        TodoCell.detailTextLabel!.text = addDate[indexPath.row]
         //戻り値の設定（表示する中身)
         return TodoCell
     }
